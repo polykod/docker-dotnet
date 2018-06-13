@@ -1,0 +1,7 @@
+FROM fedora:28
+
+ENV PYTHON_SDK_VERSION 3.6.5
+ENV IMAGE_DATE 13062018
+ENV IMAGE_NUM 003
+
+RUN dnf update -y && dnf install mc nano vim xz libstdc++ -y && dnf clean all && pip3 install --upgrade pip && python3 --version
